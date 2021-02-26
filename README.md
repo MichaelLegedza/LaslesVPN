@@ -12,4 +12,4 @@
 6) Ревью и анализ улучшения своего проекта.
 
 [Макет](https://www.figma.com/file/21sWdvA6ffslC9VFGC2ytm/FREEBIES-Landingpage-LaslesVPN-Community?node-id=1%3A2)
-[Проект](https://MichaelLegedza.github.io/LaslesVPN/)
+[Проект](https://michaellegedza.github.io/LaslesVPN/)
