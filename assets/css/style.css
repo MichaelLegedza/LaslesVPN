@@ -259,7 +259,7 @@ body {
 .menu {
     display: flex;
 }
-.menu a:not(:last-child) {
+.menu li:not(:last-child) {
     margin-right: 40px;
 }
 
@@ -891,6 +891,7 @@ body {
     display: flex;
     gap: 50px;
     margin-bottom: 60px;
+    overflow: auto;
 }
 .customers-reviews .feedback__block {
     min-width: 400px;
@@ -1146,14 +1147,14 @@ body {
 .copyright {
     color: #AFB5C0;
 }
-.footer__column {
+.footer__list {
     display: flex;
     flex-direction: column;
 }
 .footer a {
     line-height: 30px;
 }
-.footer a:not(:last-child) {
+.footer li:not(:last-child) {
     margin-bottom: 10px;
 }
 
@@ -1167,10 +1168,10 @@ body {
         max-width: unset;
         margin-bottom: 50px;
     }
-    .footer__column:not(:last-child) {
+    .footer__list:not(:last-child) {
         margin-bottom: 50px;
     }
-    .footer a:not(:last-child) {
+    .footer li:not(:last-child) {
         margin-bottom: 15px;
     }
 }
@@ -1194,7 +1195,7 @@ body {
         text-align: center;
         gap: 60px;
     }
-    .footer__column {
+    .footer__list {
         min-width: 310px;
         margin: 0px auto 50px;
     }
@@ -1213,14 +1214,14 @@ body {
     .footer__info {
         margin: 0px;
     }
-    .footer__column {
+    .footer__list {
         min-width: unset;
         margin: 0px;
     }
-    .footer__column:not(:last-child) {
+    .footer__list:not(:last-child) {
         margin-bottom: 0px;
     }
-    .footer a:not(:last-child) {
+    .footer li:not(:last-child) {
         margin-bottom: 10px;
     }
 }
