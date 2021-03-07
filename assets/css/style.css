@@ -310,10 +310,19 @@ body {
         flex-wrap: nowrap;
         row-gap: 0px;
     }
+    .header .burger {
+        margin-left: 40%;
+    }
     .btns {
         width: auto;
         justify-content: center;
     }
+}
+@media (min-width: 900px) {
+    .header .burger {
+        margin-left: 50%;
+    }
+    
 }
 
 /* Header - tab(album) */
@@ -954,6 +963,10 @@ body {
     display: flex;
     gap: 50px;
     margin-bottom: 60px;
+    overflow: scroll;
+}
+.customers-reviews__feedback::-webkit-scrollbar {
+    width: 0;
 }
 .customers-reviews .feedback__block {
     min-width: 400px;
