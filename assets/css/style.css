@@ -288,11 +288,11 @@ body {
         flex-wrap: wrap;
         row-gap: 25px;
     }
-    .burger {
+    .header .burger {
         display: block;
         cursor: pointer;
     }
-    .menu {
+    .header nav {
         display: none;
     }
     .btns {
@@ -304,7 +304,7 @@ body {
 /* Header - tab(portrait) */
 @media (min-width: 768px) {
     .header {
-        padding: 50px 0px;
+        padding: 25px 0px;
     }
     .header .container {
         flex-wrap: nowrap;
@@ -318,10 +318,13 @@ body {
 
 /* Header - tab(album) */
 @media (min-width: 992px) {
-    .burger {
+    .header {
+        padding: 50px 0px;
+    }
+    .header .burger {
         display: none;
     }
-    .menu {
+    .header nav {
         display: flex;
     }
 }
@@ -815,24 +818,53 @@ body {
     padding: 60px 0px;
 }
 .sponsored a {
+    position: relative;
     display: flex;
-    padding: 15px;
-    border: 2px solid transparent;
     transition: .2s linear;
-}
-.sponsored a:not(:last-child) {
-    margin-right: 8px;
 }
 .sponsored a:hover {
-    border: 2px solid #F53838;
-    border-radius: 20px;
     transition: .2s linear;
 }
-.sponsored img {
-    width: 190px;
-    height: auto;
-    border-radius: 10px;
+.netflix {
+    background: url(../svg/netflix.svg) no-repeat;
+    width: 200px;
+    height: 112px;
 }
+.netflix:hover {
+    background: url(../svg/netflix-hover.svg) no-repeat;
+}
+.reddit {
+    background: url(../svg/reddit.svg) no-repeat;
+    width: 190px;
+    height: 60px;
+}
+.reddit:hover {
+    background: url(../svg/reddit-hover.svg) no-repeat;
+}
+.amazon {
+    background: url(../svg/amazon.svg) no-repeat;
+    width: 277px;
+}
+.amazon:hover {
+    background: url(../svg/amazon-hover.svg) no-repeat;
+}
+.discord {
+    background: url(../svg/discord.svg) no-repeat;
+    width: 190px;
+    height: 60px;
+}
+.discord:hover {
+    background: url(../svg/discord-hover.svg) no-repeat;
+}
+.spotify {
+    background: url(../svg/spotify.svg) no-repeat;
+    width: 190px;
+    height: 60px;
+}
+.spotify:hover {
+    background: url(../svg/spotify-hover.svg) no-repeat;
+}
+
 
 /* Sponsored - mobile(album) */
 @media (min-width: 1px) {
@@ -840,6 +872,19 @@ body {
         flex-wrap: wrap;
         flex-direction: column;
         gap: 50px;
+    }
+    .reddit {
+        left: 10px;
+    }
+    .amazon {
+        height: 150px;
+        bottom: 40px;
+    }
+    .discord {
+        bottom: 35px;
+    }
+    .spotify {
+        left: 10px;
     }
 }
 
@@ -851,6 +896,24 @@ body {
         justify-content: center;
         column-gap: 75px;
         row-gap: 30px;
+    }
+    .netflix {
+        bottom: 6px;
+    }
+    .reddit {
+        left: 20px;
+    }
+    .amazon {
+        height: 208px;
+        right: 30px;
+        bottom: 0px;
+    }
+    .discord {
+        bottom: 5px;
+        right: 30px;
+    }
+    .spotify {
+        left: 0px;
     }
 }
 
