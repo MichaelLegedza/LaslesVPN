@@ -41,7 +41,8 @@ h5 span {
     font-weight: 400; 
     color: #4F5665;
 }
-p {
+p,
+blockquote {
     font-size: 16px;
     line-height: 30px;
     font-weight: 500;
@@ -322,7 +323,6 @@ body {
     .header .burger {
         margin-left: 50%;
     }
-    
 }
 
 /* Header - tab(album) */
@@ -447,7 +447,7 @@ body {
     padding: 37px 0px;
     background-color: #FFFFFF;
     border-radius: 10px;
-    box-shadow: 0px 20px 50px rgb(13, 16, 37, 0.06);
+    box-shadow: 0px 20px 50px rgb(13, 16, 37, 0.20);
 }
 .benefit .row {
     display: flex;
@@ -482,31 +482,14 @@ body {
 }
 
 
-/* Benefit - mobile(album) */
 @media (min-width: 1px) {
-    .benefit .row {
-        width: 100%;
-    }
-}
-
-/* Benefit - mobile(album) */
-@media (min-width: 576px) {
-    .benefit .row {
-        width: 75%;
-        margin: auto;
-    }
-}
-@media (min-width: 992px) {
     .benefit .container {
-        margin: 40px;
-    }
-}
-
-/* Benefit - tab(portrait) */
-@media (max-width: 992px) {
-    .benefit .container {
+        width: 70%;
         flex-direction: column;
         padding: 0px 16px;
+    }
+    .benefit .row {
+        width: 100%;
     }
     .benefit .container .row {
         justify-content: center;
@@ -519,10 +502,45 @@ body {
     }
 }
 
+/* Benefit - mobile(album) */
+@media (min-width: 576px) {
+    .benefit .row {
+        width: 75%;
+        margin: auto;
+    }
+}
+
+/* Benefit - tab(portrait) */
+@media (min-width: 768px) {
+    .benefit .container {
+        flex-direction: row;
+        width: 90%;
+        padding: 16px;
+    }
+    .benefit .row:not(:last-child) {
+        border-right: 2px solid #EEEFF2;
+        border-bottom: 0px solid #EEEFF2;
+    }
+}
+
+@media (min-width: 992px) {
+    .benefit .container {
+        margin: 40px;
+    }
+}
+
 /* Benefit - tab(album) */
 @media (min-width: 1200px) {
     .benefit .container {
         margin: 0 auto;
+        padding: 25px 16px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .benefit .container {
+        width: 100%;
+        padding: 37px 16px;
     }
 }
 
@@ -910,11 +928,10 @@ body {
         bottom: 6px;
     }
     .reddit {
-        left: 20px;
+        left: 40px;
     }
     .amazon {
         height: 208px;
-        right: 30px;
         bottom: 0px;
     }
     .discord {
