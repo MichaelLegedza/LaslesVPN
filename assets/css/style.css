@@ -335,7 +335,7 @@ body {
         background-color: #FFFFFF;
     }
     .header__menu a {
-        font-size: 20px;
+        font-size: 24px;
     }
     .header__menu li:not(:last-child) {
         padding-bottom: 25px;
@@ -368,9 +368,6 @@ body {
     }
     .header__menu li {
         padding: 25px;
-    }
-    .header__menu a {
-        font-size: 18px;
     }
     .btn--link {
         margin-right: 10px;
