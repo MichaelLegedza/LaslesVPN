@@ -194,7 +194,7 @@ body {
     transition: .2s linear;
 }
 .btn--link {
-    margin-right: 10px;
+    margin-right: 7px;
     padding: 7px 20px;
     border-radius: 20px;
     transition: .1s linear;
@@ -296,11 +296,8 @@ body {
     overflow: auto;
 }
 .header__menu.active {
-    top: 60px;
+    top: 50px;
     transition: .35s linear;
-}
-.header__menu li:not(:last-child) {
-    margin-right: 40px;
 }
 
 
@@ -340,19 +337,13 @@ body {
     .header__menu a {
         font-size: 20px;
     }
-    .header__menu li {
-        padding: 20px;
-    }
     .header__menu li:not(:last-child) {
-        margin-right: 0px;
+        padding-bottom: 25px;
     }
     .btns {
         width: 100%;
         justify-content: flex-end;
         align-items: center;
-    }
-    .btn--link {
-        margin-right: 0px;
     }
     .btn--outline {
         display: none;
@@ -372,11 +363,18 @@ body {
     .header__menu.active {
         top: 100px;
     }
+    .header__menu li:not(:last-child) {
+        padding-bottom: 25px;
+    }
+    .header__menu li {
+        padding: 25px;
+    }
     .header__menu a {
         font-size: 18px;
     }
     .btn--link {
         margin-right: 10px;
+        padding: 13px 20px;
     }
     .btn--outline {
         display: inline-block;
@@ -387,6 +385,9 @@ body {
 @media (min-width: 768px) {
     .header__menu {
         justify-content: space-around;
+    }
+    .header__menu li:not(:last-child) {
+        padding-bottom: 20px;
     }
     .header__menu li {
         padding: 20px;
@@ -404,7 +405,7 @@ body {
 /* Header - tab(album) */
 @media (min-width: 992px) {
     .header {
-        padding: 50px 0px;
+        padding: 40px 0px;
     }
     .header__burger {
         display: none;
@@ -426,6 +427,11 @@ body {
 }
 
 /* Header - desktop */
+@media (min-width: 1200px) {
+    .header {
+        padding: 50px 0px;
+    }
+}
 
 /* Header end */
 
