@@ -178,20 +178,6 @@ body {
 }
 
 
-/* Burger */
-.burger {
-    display: none;
-}
-.burger div {
-    width: 30px;
-    height: 2px;
-    background-color: #F53855;
-}
-.burger div:not(:last-child) {
-    margin-bottom: 5px;
-}
-
-
 /* Buttons */
 .btn {
     padding: 0;
@@ -256,11 +242,64 @@ body {
 }
 
 
-/* Menu */
-.menu {
-    display: flex;
+/* Burger */
+.header__burger {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 18px;
 }
-.menu li:not(:last-child) {
+.header__burger:before,
+.header__burger:after {
+    content: '';
+    background-color: #F53838;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    transition: .2s linear;
+}
+.header__burger:before {
+    top: 0;
+}
+.header__burger:after {
+    bottom: 0;
+}
+.header__burger.active:before {
+    transform: rotate(45deg);
+    top: 8px;
+}
+.header__burger.active:after {
+    transform: rotate(-45deg);
+    bottom: 8px;
+}
+.header__burger.active span {
+    transform: scale(0);
+}
+.header__burger span {
+    position: absolute;
+    background-color: #F53838;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    top: 8px;
+    transition: .35s linear;
+}
+.header__menu {
+    display: flex;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    transition: .35s linear;
+    overflow: auto;
+}
+.header__menu.active {
+    top: 60px;
+    transition: .35s linear;
+}
+.header__menu li:not(:last-child) {
     margin-right: 40px;
 }
 
@@ -282,59 +321,107 @@ body {
 
 /* Header - mobile(album) */
 @media (min-width: 1px) {
+    body.lock {
+        overflow: hidden;
+    }
     .header {
-        padding: 30px 0px;
+        padding: 12px 0px;
     }
-    .header .container {
-        flex-wrap: wrap;
-        row-gap: 25px;
-    }
-    .header .burger {
+    .header__burger {
         display: block;
         cursor: pointer;
     }
-    .header nav {
-        display: none;
+    .header__menu {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #FFFFFF;
+    }
+    .header__menu a {
+        font-size: 20px;
+    }
+    .header__menu li {
+        padding: 20px;
+    }
+    .header__menu li:not(:last-child) {
+        margin-right: 0px;
     }
     .btns {
         width: 100%;
-        justify-content: center;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .btn--link {
+        margin-right: 0px;
+    }
+    .btn--outline {
+        display: none;
+        margin-right: 30px;
+    }
+}
+
+@media (min-width: 576px) {
+    .header {
+        padding: 28px 0px;
+    }
+    .header__menu {
+        height: 12%;
+        justify-content: space-evenly;
+        flex-direction: row;
+    }
+    .header__menu.active {
+        top: 100px;
+    }
+    .header__menu a {
+        font-size: 18px;
+    }
+    .btn--link {
+        margin-right: 10px;
+    }
+    .btn--outline {
+        display: inline-block;
     }
 }
 
 /* Header - tab(portrait) */
 @media (min-width: 768px) {
-    .header {
-        padding: 25px 0px;
+    .header__menu {
+        justify-content: space-around;
     }
-    .header .container {
-        flex-wrap: nowrap;
-        row-gap: 0px;
+    .header__menu li {
+        padding: 20px;
     }
-    .header .burger {
-        margin-left: 40%;
+    .header__menu li:not(:last-child) {
+        margin-right: 0px;
     }
     .btns {
         width: auto;
         justify-content: center;
-    }
+    } 
 }
-@media (min-width: 900px) {
-    .header .burger {
-        margin-left: 50%;
-    }
-}
+
 
 /* Header - tab(album) */
 @media (min-width: 992px) {
     .header {
         padding: 50px 0px;
     }
-    .header .burger {
+    .header__burger {
         display: none;
     }
-    .header nav {
+    .header__menu {
         display: flex;
+        position: static;
+        width: unset;
+        justify-content: space-between;
+        margin: 0;
+        padding: 0;
+    }
+    .header__menu a {
+        font-size: 16px;
+    }
+    .btn--outline {
+        margin-right: 0px;
     }
 }
 
@@ -388,6 +475,9 @@ body {
 
 /* Intro - tab(portrait) */
 @media (min-width: 576px) {
+    .intro {
+        padding: 75px 0px;
+    }
     .intro .container {
         align-items: center;
     }
@@ -409,6 +499,9 @@ body {
 
 /* Intro - desktop */
 @media (min-width: 992px) {
+    .intro {
+        padding: 50px 0px;
+    }
     .intro .container {
         flex-direction: row;
     }
