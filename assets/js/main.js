@@ -6,21 +6,15 @@ $(document).ready(function() {
   })
 });
 
-// Scroll top
-mybutton = document.getElementById("scrollBtn");
+const smoothLinks = document.querySelectorAll('.top');
+for (let smoothLink of smoothLinks) {
+    smoothLink.addEventListener('click', function (e) {
+        e.preventDefault();
+        const id = smoothLink.getAttribute('.top');
 
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 125 || document.documentElement.scrollTop > 125) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
-
-// Cross-browser scroll
-function topFunction() {
-  document.body.scrollTop = 0; 
-  document.documentElement.scrollTop = 0; 
-}
+        document.querySelector(id).scrollIntoView({
+            behavior: 'behavior',
+            block: 'start'
+        });
+    });
+};
