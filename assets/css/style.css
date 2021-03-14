@@ -1508,7 +1508,7 @@ body {
 }
 @media (min-width: 1300px) {
     .footer .container {
-        padding: 0px 16px;
+        padding: 0px;
     }
 }
 
