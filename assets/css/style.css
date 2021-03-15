@@ -367,7 +367,7 @@ body {
 
 @media (min-width: 576px) {
     .header {
-        padding: 25px 0px;
+        padding: 30px 0px;
         border-bottom: 1px solid #EEEFF2;
     }
     .header__menu {
@@ -419,7 +419,6 @@ body {
 @media (min-width: 992px) {
     .header {
         padding: 40px 0px;
-        
     }
     .header__burger {
         display: none;
@@ -1515,12 +1514,12 @@ body {
 /* Footer end */
 
 /* Scroll */
-.my-btn {
+.scroll-up {
     display: flex;
     position: fixed;
-    bottom: 35px;
-    right: 50px;
     z-index: 99;
+    bottom: 1px;
+    right: 1px;
     font-size: 16px;
     border: 2px solid transparent;
     outline: none;
@@ -1532,24 +1531,32 @@ body {
     border-radius: 5px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    transition: .3s linear;
+    transition: .2s linear;
+    visibility: hidden;
+    opacity: 0;
 }
-.my-btn:hover {
+.scroll-up:hover {
     background-color: #a82222;
-    transition: .3s linear;
+    transition: .2s linear;
+}
+.scroll-up--active {
+  visibility: visible;
+  opacity: 1;
+  bottom: 35px;
+  right: 50px;
 }
 @media (min-width: 1px) {
-    .my-btn {
+    .scroll-up {
         right: 15px;
     }
 }
 @media (min-width: 576px) {
-    .my-btn {
+    .scroll-up {
         right: 25px;
     }
 }
 @media (min-width: 1600px) {
-    .my-btn {
+    .scroll-up {
         right: 50px;
     }
 }

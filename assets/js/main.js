@@ -6,15 +6,26 @@ $(document).ready(function() {
   })
 });
 
-const smoothLinks = document.querySelectorAll('.top');
-for (let smoothLink of smoothLinks) {
-    smoothLink.addEventListener('click', function (e) {
-        e.preventDefault();
-        const id = smoothLink.getAttribute('.top');
+const offset = 200;
+const scrollUp = document.querySelector('.scroll-up');
 
-        document.querySelector(id).scrollIntoView({
-            behavior: 'behavior',
-            block: 'start'
-        });
-    });
-};
+const getTop = () => window.pageYOffset || document.documentElement.scrollTop;
+
+const updateDashoffset = () => {};
+
+window.addEventListener('scroll', () => {
+  updateDashoffset();
+  
+  if (getTop() > offset) {
+    scrollUp.classList.add('scroll-up--active')
+  } else {
+    scrollUp.classList.remove('scroll-up--active')
+  }
+});
+
+scrollUp.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
