@@ -6,6 +6,8 @@ $(document).ready(function() {
   })
 });
 
+
+// Кнопка скрола
 const offset = 200;
 const scrollUp = document.querySelector('.scroll-up');
 
@@ -29,3 +31,22 @@ scrollUp.addEventListener('click', () => {
     behavior: 'smooth'
   });
 });
+
+
+// header scroll
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    document.getElementById("header").style.padding = "15px";
+    document.getElementById("header").style.borderBottom = "1px solid #dadde4";
+  } else {
+    document.getElementById("header").style.padding = "35px 20px";
+    document.getElementById("header").style.borderBottom = "0";
+  }
+}
+
+
+
+
+

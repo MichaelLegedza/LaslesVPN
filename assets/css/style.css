@@ -183,7 +183,24 @@ body {
 /* Logo */
 .logo {
     display: flex;
+    align-items: center;
+    font-size: 20px;
+    line-height: 23px;
+    font-weight: 700;
+    color: #0B132A;
 }
+.logo img {
+    padding-right: 10px;
+    transition: .6s;
+}
+.logo:hover img {
+    transform: rotate(360deg);
+    transition: .6s;
+}
+.logo span {
+    font-weight: 800;
+}
+
 
 
 /* Buttons */
@@ -320,6 +337,12 @@ body {
     padding: 30px 0px;
     background-color: #FFFFFF;
     z-index: 100;
+    transition: .4s;
+}
+.header__mini {
+    padding: 15px;
+    border-bottom: 1px solid grey;
+    transition: .4s;
 }
 .header .container {
     display: flex;
@@ -336,7 +359,10 @@ body {
         overflow: hidden;
     }
     .header {
-        padding: 10px 0px;
+        padding: 10px;
+    }
+    .header .container {
+        padding: 0px;
     }
     .header__burger {
         display: block;
@@ -364,11 +390,14 @@ body {
         margin-right: 30px;
     }
 }
-
+@media (max-width: 576px) {
+    .header {
+        padding: 10px !important;
+    }
+}
 @media (min-width: 576px) {
     .header {
-        padding: 30px 0px;
-        border-bottom: 1px solid #EEEFF2;
+        padding: 30px 20px;
     }
     .header__menu {
         height: 10%;
@@ -418,7 +447,7 @@ body {
 /* Header - tab(album) */
 @media (min-width: 992px) {
     .header {
-        padding: 40px 0px;
+        padding: 40px 20px;
     }
     .header__burger {
         display: none;
@@ -442,7 +471,7 @@ body {
 /* Header - desktop */
 @media (min-width: 1200px) {
     .header {
-        padding: 30px 0px;
+        padding: 30px 20px;
     }
 }
 
@@ -1129,6 +1158,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 25px;
 }
 .customers-reviews .feedback__toggle {
     display: flex;
@@ -1169,51 +1199,52 @@ body {
 .customers-reviews .arrows {
     display: flex;
 }
-.customers-reviews .arrows div {
+.customers-reviews button {
     display: flex;
     width: 60px;
     height: 60px;
     align-items: center;
     justify-content: center;
     margin-right: 20px;
+    background-color: #FFFFFF;
     border: 2px solid #F53838;
     border-radius: 50%;
     cursor: pointer;
     transition: .2s;
+    outline: 0;
 }
-.customers-reviews .arrows div:hover {
+.customers-reviews button:hover {
     background-color: #F53838;
     transition: .2s;
 }
-.customers-reviews .arrows div:last-child {
+.customers-reviews button:last-child {
     margin-right: 0px;
 }
-.customers-reviews .arrow-left {
-    background: url(../svg/arrow-left.svg) no-repeat;
-    width: 60px;
-    height: 60px;
+.customers-reviews button .arrow-left {
+    background: url(../svg/ar-left.svg) no-repeat;
+    width: 20px;
+    height: 17.5px;
     margin: 0;
     transition: .2s;
 }
-.customers-reviews .arrow-left:hover {
-    background: url(../svg/arrow-left-hover.svg) no-repeat;
-    width: 60px;
-    height: 60px;
+.customers-reviews button:hover .arrow-left {
+    background: url(../svg/ar-left-hover.svg) no-repeat;
+    width: 20px;
+    height: 17.5px;
     transition: .2s;
 }
-.customers-reviews .arrow-right {
+.customers-reviews button .arrow-right {
     position: relative;
-    right: 2px;
-    background: url(../svg/arrow-right.svg) no-repeat;
-    width: 60px;
-    height: 60px;
+    background: url(../svg/ar-right.svg) no-repeat;
+    width: 20px;
+    height: 17.5px;
     margin: 0;
     transition: .2s;
 }
-.customers-reviews .arrow-right:hover {
-    background: url(../svg/arrow-right-hover.svg) no-repeat;
-    width: 60px;
-    height: 60px;
+.customers-reviews button:hover .arrow-right {
+    background: url(../svg/ar-right-hover.svg) no-repeat;
+    width: 20px;
+    height: 17.5px;
     transition: .2s;
 }
 
@@ -1281,7 +1312,6 @@ body {
     }
 }
 
-/* Customers-reviews - tab(album) */
 
 /* Customers-reviews - desktop */
 @media (min-width: 992px) {
@@ -1388,7 +1418,8 @@ body {
     max-width: 310px;
 }
 .footer .logo {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
     margin-bottom: 20px;
 }
 .footer .subtitle,
@@ -1484,12 +1515,15 @@ body {
 /* Footer - desktop */
 @media (min-width: 1080px) {
     .footer .container {
-        padding: 0px 50px;
+        padding: 0px 20px;
         text-align: unset;
         gap: 0px;
     }
     .footer__info {
         margin: 0px;
+    }
+    .footer .logo {
+        justify-content: unset;
     }
     .footer__icons {
         justify-content: unset;
@@ -1505,6 +1539,7 @@ body {
         margin-bottom: 10px;
     }
 }
+
 @media (min-width: 1300px) {
     .footer .container {
         padding: 0px;
@@ -1532,6 +1567,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: .2s linear;
+    transition-delay: .4s;
     visibility: hidden;
     opacity: 0;
 }
@@ -1544,6 +1580,7 @@ body {
   opacity: 1;
   bottom: 35px;
   right: 50px;
+  transition-delay: .4s;
 }
 @media (min-width: 1px) {
     .scroll-up {
