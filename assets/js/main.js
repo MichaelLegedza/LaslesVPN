@@ -47,6 +47,27 @@ function scrollFunction() {
 }
 
 
+// Slider
+$(document).ready(function() {
+  $('.slider').slick({
+      arrows: true,
+      dots: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      speed: 700,
+      easing: 'linear',
+      infinite: true,
+      initialSlide: 0,
+      appendArrows: $('.arrows'),
+      appendDots: $('.feedback__toggle'),
+      variableWidth: true
+  });
+ 
+      // Обновление слайдера
+  $('.slider').slick('setPosition');
+  
+});
+
 
 
 
